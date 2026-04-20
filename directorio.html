@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HOSPITAL</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,87.5,300..800;1,87.5,300..800&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+
+        <aside class="menu">
+            <img class="logotipo" src="imagenes/logo.png">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Atención médica</a>
+                    <ul class="submenu">
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="especialidades.html">Especialidades</a></li>
+                    </ul>
+                </li>
+                <li><a href="directorio.html">Directorio Medico</a></li>
+                <li><a href="index.html#unidades">Unidades Hospitalarias</a></li>
+                <li><a href="formulario.html">Historia Clínica</a></li>
+                <li><a href="cita.html" class="btn-cita">Agendar Cita</a></li>
+            </ul>
+        </aside>
+
+        <article>
+        <section id="directorio" class="directorio">
+            <h2 class="titulo">DIRECTORIO MÉDICO</h2>
+            <p class="texto-presentacion">El selecto equipo de especialistas de nuestra 
+                Torre de Consultorios, te brindan la confianza y el 
+                profesionalismo  que necesitas para atender tu salud</p>
+            <div class="contenedor-directorio">
+                
+                <div class="buscador">
+                    <input type="text" id="busqueda" placeholder="Buscar especialidad o médico">
+                    <button onclick="buscar()">Buscar</button>
+                </div>
+                
+                <div class="contenedor-doctores">
+                    <div class="tarjeta-doctor" data-especialidad="cardiologia">
+                        <img class="imagen-doctor" src="imagenes/juan.jpg">
+                        <h3>Dr. Juan Pérez</h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Ecatepec</p>
+                            </div>
+
+                            <div>
+                                <img class="icono" src="imagenes/corazon.png">
+                                <p>Cardiología</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 832</p>
+                            </div>
+
+                        </div>
+                    </div>
+                        
+                    <div class="tarjeta-doctor" data-especialidad="pediatria">
+                        <img class="imagen-doctor" src="imagenes/ana.jpg">
+                        <h3>Dra. Ana López</h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Lindavista</p>
+                            </div>
+                            
+                            <div>
+                                <img class="icono" src="imagenes/bebe.png">
+                                <p>Pediatría</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 820</p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="tarjeta-doctor" data-especialidad="oftalmologia">
+                        <img class="imagen-doctor" src="imagenes/luis.jpg">
+                        <h3>Dr. Emiliano Hernandez</h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Ecatepec</p>
+                            </div>
+
+                            <div>
+                                <img class="icono" src="imagenes/oftalmologia.png">
+                                <p>Oftalmología</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 400</p> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-doctor" data-especialidad="neurologia">
+                        <img class="imagen-doctor" src="imagenes/maria.jpg">
+                        <h3>Dra. María Torres</h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Lindavista</p>
+                            </div>
+
+                            <div>
+                                <img class="icono" src="imagenes/cerebro.png">
+                                <p>Neurología</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 514</p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="tarjeta-doctor" data-especialidad="traumatologia">
+                        <img class="imagen-doctor" src="imagenes/carlos.jpeg">
+                        <h3>Dr. Carlos Ramírez</h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Cd Azteca</p>
+                            </div>
+
+                            <div>
+                                <img class="icono" src="imagenes/hueso.png">
+                                <p>Traumatología</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 220</p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="tarjeta-doctor" data-especialidad="ginecologia">
+                        <img class="imagen-doctor" src="imagenes/laura.png">
+                        <h3>Dra. Laura Méndez</h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Coacalco</p>
+                            </div>
+
+                            <div>
+                                <img class="icono" src="imagenes/mujer.png">
+                                <p>Ginecología y Obstetricia</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 305</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-doctor" data-especialidad="cardiologia">
+                        <img class="imagen-doctor" src="imagenes/daniela.jpg">
+                        <h3>Dra. Daniela Gonzalez</h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Ecatepec</p>
+                            </div>
+
+                            <div>
+                                <img class="icono" src="imagenes/corazon.png">
+                                <p>Cardiología</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 800</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-doctor" data-especialidad="cirugia-general">
+                        <img class="imagen-doctor" src="imagenes/miguel.jpg">
+                        <h3>Dr. Miguel Torres </h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Cd Azteca</p>
+                            </div>
+
+                            <div>
+                                <img class="icono" src="imagenes/bisturi.png">
+                                <p>Cirugía general</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 412</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-doctor" data-especialidad="hematologia">
+                        <img class="imagen-doctor" src="imagenes/francisco.png">
+                        <h3>Dr. Francisco Hernandez </h3>
+                        <div class="info-linea">
+                            <div>
+                                <img class="icono" src="imagenes/hospital.png">
+                                <p>Hospital NovaCare Coacalco</p>
+                            </div>
+
+                            <div>
+                                <img class="icono" src="imagenes/celulas.png">
+                                <p>Hematología</p>
+                            </div>
+
+                            <div>
+                                <img src="imagenes/location.png" class="icono">
+                                <p>Consultorio: 300</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        </article>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h2>Hospital NovaCare</h2>
+                    <p>Comprometidos con tu salud y bienestar las 24 horas del día.</p>
+                </div>
+                <div class="footer-contactos">
+                    <h3>Contacto</h3>
+
+                    <div>
+                    <img class="icono" src="imagenes/ubicacion.png">
+                    <p>Av. Principal #123, Ciudad</p>
+                    </div>
+
+                    <div>
+                    <img class="icono" src="imagenes/llamada.png">
+                    <p>(55) 1234 5678</p>
+                    </div>
+
+                    <div>
+                    <img class="icono" src="imagenes/correo.png">
+                    <p>contacto@novacare.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <a href="#">Inicio</a>
+                    <a href="#">Servicios</a>
+                    <a href="#">Directorio médico</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horarios</h3>
+                    <p>Emergencias: 24/7</p>
+                    <p>Consulta: 8:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Hospital NovaCare. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <script>
+        function buscar() {
+            const input = document.getElementById("busqueda").value.toLowerCase();
+            const tarjetas = document.querySelectorAll(".tarjeta-doctor");
+            
+            tarjetas.forEach(tarjeta => {
+                const especialidad = tarjeta.dataset.especialidad;
+                if (especialidad.includes(input)) {
+                    tarjeta.style.display = "block";
+                } else {
+                    tarjeta.style.display = "none";
+                }
+            });
+            }
+        </script>
+    </body>
+</html>
